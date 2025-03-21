@@ -1,0 +1,39 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="pagina-inicial">
+        <header class="cabecalho">
+            <img src="{% static 'assets/logo/logo-J.png' %}" alt="Logo do Space" />
+            <div class="cabecalho__busca">
+                <div class="busca__fundo">
+                    <input class="busca__input" type="text" placeholder="O que você procura?">
+                    <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de search">
+                </div>
+            </div>
+        </header>
+        <main class="principal">
+            <section class="menu-lateral">
+                <nav class="menu-lateral__navegacao">
+                    <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Mais vistas</a>
+                    <a href="https://linkedin.com/in/armandobonifacio"><img src="{% static 'assets/ícones/1x/Novas - inativo.png' %}"> Meu Linkedin</a>
+                    <a href="https://github.com/Armando-Bon"><img src="{% static 'assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Meu GitHub</a>
+                </nav>
+            </section>
+            <section class="conteudo">
+                <section class="imagem">
+                    <div class="imagem__conteudo">
+                        <img class="imagem__imagem" src="{% static '/assets/imagens/galeria/nebulosa-anel.png' %}">
+                        <div class="imagem__info">
+                            <div class="imagem__texto">
+                                <p class="imagem__titulo">Nebulosa Anel</p>
+                                <p class="imagem__descricao">15 de setembro de 2019</p>
+                                <p class="imagem__texto">A Nebulosa do Anel (também conhecida como Messier 57 ou NGC 6720) é uma nebulosa planetária localizada na constelação de Lyra, a aproximadamente 2.000 anos-luz da Terra. Esta estrutura impressionante foi formada quando uma estrela similar ao Sol expeliu suas camadas externas no estágio final de sua vida, criando um anel espetacular de gás em expansão.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="pagina-inicial">
+        <header class="cabecalho">
+            <img src="{% static 'assets/logo/logo-J.png' %}" alt="Logo do Space" />
+            <div class="cabecalho__busca">
+                <div class="busca__fundo">
+                    <input class="busca__input" type="text" placeholder="O que você procura?">
+                    <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de search">
+                </div>
+            </div>
+        </header>
+        <main class="principal">
+            <section class="menu-lateral">
+                <nav class="menu-lateral__navegacao">
+                    <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Mais vistas</a>
+                    <a href="https://linkedin.com/in/armandobonifacio"><img src="{% static 'assets/ícones/1x/Novas - inativo.png' %}"> Meu Linkedin</a>
+                    <a href="https://github.com/Armando-Bon"><img src="{% static 'assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Meu GitHub</a>
+                </nav>
+            </section>
+            <section class="conteudo">
+                <section class="imagem">
+                    <div class="imagem__conteudo">
+                        <img class="imagem__imagem" src="{% static '/assets/imagens/galeria/nebulosa-aguia.png' %}">
+                        <div class="imagem__info">
+                            <div class="imagem__texto">
+                                <p class="imagem__titulo">Nebulosa Aguia</p>
+                                <p class="imagem__descricao">07 de abril de 2020</p>
+                                <p class="imagem__texto">Os olhos humanos podem ver apenas uma pequena porção da faixa de radiação emitida pelos objetos ao nosso redor. Chamamos essa ampla gama de radiação de espectro eletromagnético, e a parte que podemos ver, de luz visível.
+
+                                    Nesta imagem do Telescópio Espacial Hubble, da Nasa e da Agência Espacial Europeia (ESA), os pesquisadores revisitaram uma das imagens mais icônicas e populares feitas por ele: os Pilares da Criação da Nebulosa da Águia.Aqui, os pilares são vistos na luz infravermelha, que penetra através da obscuridade da poeira e do gás e revela uma visão mais desconhecida – mas igualmente surpreendente – dessas formações. </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+{% endblock %}

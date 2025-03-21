@@ -1,0 +1,54 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %} 
+    <div class="pagina-inicial">
+        <header class="cabecalho">
+            <img src="{% static 'assets/logo/logo-J.png' %}" alt="Logo do Space" />
+            <div class="cabecalho__busca">
+                <div class="busca__fundo">
+                    <input class="busca__input" type="text" placeholder="O que você procura?">
+                    <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de search">
+                </div>
+            </div>
+        </header>
+        <main class="principal">
+            <section class="menu-lateral">
+                <nav class="menu-lateral__navegacao">
+                    <a href="{% url 'index' %}"><img src="{% static 'assets/ícones/1x/Home - ativo.png' %}"> Home</a>
+                    <a href="{% url 'Sobre' %}"><img src="{% static 'assets/ícones/1x/Mais vistas - inativo.png' %}"> Sobre o Space</a>
+                    <a href="https://linkedin.com/in/armandobonifacio"><img src="{% static 'assets/ícones/1x/Novas - inativo.png' %}"> Meu Linkedin</a>
+                    <a href="https://github.com/Armando-Bon"><img src="{% static 'assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Meu GitHub</a>
+                </nav>
+            </section>
+            <section class="conteudo">
+                <section class="sobre">
+                    <h2 class="sobre__titulo">Sobre o Space</h2>
+                    <div class="sobre__texto">
+                        <p>Bem-vindo ao Space - Uma Galeria de Fotos Espaciais!</p>
+                        <br>
+                        <p>Este projeto é um site desenvolvido com Django que exibe imagens espaciais. A base do projeto foi criada durante minhas aulas na escola de programação Alura, porem ao fim das aulas o projeto ainda estava muito incompleto e repetitivo então decidi deixa-lo mais robusto por conta própria, tambem deixarei o projeto inicial na descrição para comparação.</p>
+                        <br>
+                        <p>Nesta galeria, você encontrará:</p>
+                        <ul class="sobre__lista">
+                            <li>• Nebulosa Carina: Uma das maiores e mais brilhantes nebulosas visíveis no céu noturno</li>
+                            <li>• Nebulosa Águia: Famosa pelos seus "Pilares da Criação"</li>
+                            <li>• Nebulosa Anel: Uma fascinante nebulosa planetária</li>
+                            <li>• Nebulosa Cabeça de Bruxa: Uma nebulosa de reflexão com forma peculiar</li>
+                            <li>• Nebulosa Cabeça de Cavalo: Uma das nebulosas mais reconhecíveis do céu</li>
+                            <li>• Nebulosa Helix: Conhecida como o "Olho de Deus"</li>
+                        </ul>
+                        <br>
+                        <p>Este projeto foi desenvolvido utilizando:</p>
+                        <ul class="sobre__lista">
+                            <li>• Django - Framework web em Python</li>
+                            <li>• HTML5 e CSS3 para estruturação e estilização</li>
+                            <li>• Sistema de templates do Django</li>
+                        </ul>
+                        <br>
+                        <p></p>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+{% endblock %}

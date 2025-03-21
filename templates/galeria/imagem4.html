@@ -1,0 +1,39 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="pagina-inicial">
+        <header class="cabecalho">
+            <img src="{% static 'assets/logo/logo-J.png' %}" alt="Logo do Space" />
+            <div class="cabecalho__busca">
+                <div class="busca__fundo">
+                    <input class="busca__input" type="text" placeholder="O que você procura?">
+                    <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de search">
+                </div>
+            </div>
+        </header>
+        <main class="principal">
+            <section class="menu-lateral">
+                <nav class="menu-lateral__navegacao">
+                    <a href="{% url 'index' %}"><img src="{% static '/assets/ícones/1x/Home - ativo.png' %}"> Home</a>
+                    <a href="#"><img src="{% static '/assets/ícones/1x/Mais vistas - inativo.png' %}"> Mais vistas</a>
+                    <a href="https://linkedin.com/in/armandobonifacio"><img src="{% static 'assets/ícones/1x/Novas - inativo.png' %}"> Meu Linkedin</a>
+                    <a href="https://github.com/Armando-Bon"><img src="{% static 'assets/ícones/1x/Surpreenda-me - inativo.png' %}"> Meu GitHub</a>
+                </nav>
+            </section>
+            <section class="conteudo">
+                <section class="imagem">
+                    <div class="imagem__conteudo">
+                        <img class="imagem__imagem" src="{% static '/assets/imagens/galeria/nebulosa-cabeca-bruxa.png' %}">
+                        <div class="imagem__info">
+                            <div class="imagem__texto">
+                                <p class="imagem__titulo">Nebulosa Cabeça de Bruxa</p>
+                                <p class="imagem__descricao">31 de outubro de 2019</p>
+                                <p class="imagem__texto">A Nebulosa Cabeça de Bruxa (IC 2118) é uma nebulosa de reflexão na constelação de Eridanus que fica a aproximadamente 1000 anos-luz da Terra. Seu nome vem de sua forma peculiar, que lembra o perfil de uma bruxa. A nebulosa brilha principalmente devido à luz refletida da estrela próxima Rigel, a estrela mais brilhante da constelação de Órion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+{% endblock %}
